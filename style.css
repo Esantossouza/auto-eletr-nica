@@ -1,0 +1,222 @@
+/* Variáveis de Cores e Estilo McQueen */
+:root {
+    --vermelho-mcqueen: #D80000;
+    --amarelo-mcqueen: #FFC700;
+    --laranja-mcqueen: #FF5500;
+    --preto-asfalto: #121212;
+    --cinza-escuro: #1E1E1E;
+    --branco: #FFFFFF;
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--preto-asfalto);
+    color: var(--branco);
+    overflow-x: hidden;
+}
+
+/* Cabeçalho */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: linear-gradient(90deg, var(--preto-asfalto) 0%, var(--vermelho-mcqueen) 100%);
+    border-bottom: 4px solid var(--amarelo-mcqueen);
+}
+
+.logo {
+    font-family: 'Racing Sans One', cursive;
+    font-size: 28px;
+    color: var(--amarelo-mcqueen);
+    text-shadow: 2px 2px var(--laranja-mcqueen);
+}
+
+.logo span {
+    color: var(--branco);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--amarelo-mcqueen);
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background: linear-gradient(135deg, rgba(18, 18, 18, 0.85), rgba(216, 0, 0, 0.75)), 
+                radial-gradient(circle at right, var(--laranja-mcqueen), var(--vermelho-mcqueen));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-family: 'Racing Sans One', cursive;
+    font-size: 3rem;
+    color: var(--amarelo-mcqueen);
+    text-transform: uppercase;
+    text-shadow: 3px 3px 0px var(--laranja-mcqueen);
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, var(--amarelo-mcqueen), var(--laranja-mcqueen));
+    color: var(--preto-asfalto);
+    border: none;
+    padding: 15px 35px;
+    font-size: 1.2rem;
+    font-weight: 900;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 85, 0, 0.5);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 199, 0, 0.8);
+}
+
+/* Serviços */
+.servicos {
+    padding: 80px 40px;
+    background-color: var(--cinza-escuro);
+    text-align: center;
+}
+
+.servicos h2 {
+    font-family: 'Racing Sans One', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--branco);
+}
+
+.servicos h2 span {
+    color: var(--laranja-mcqueen);
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: linear-gradient(180deg, #2A2A2A, #1A1A1A);
+    border-top: 4px solid var(--vermelho-mcqueen);
+    border-bottom: 4px solid var(--amarelo-mcqueen);
+    border-radius: 10px;
+    padding: 30px 20px;
+    width: 250px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card .icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: var(--amarelo-mcqueen);
+    margin-bottom: 10px;
+}
+
+/* Sobre */
+.sobre {
+    padding: 80px 40px;
+    background: linear-gradient(90deg, var(--vermelho-mcqueen), var(--laranja-mcqueen));
+    text-align: center;
+}
+
+.sobre h2 {
+    font-family: 'Racing Sans One', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.sobre h2 span {
+    color: var(--amarelo-mcqueen);
+}
+
+.sobre-texto p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Rodapé */
+.footer {
+    background-color: var(--preto-asfalto);
+    border-top: 4px solid var(--amarelo-mcqueen);
+    padding: 40px 20px 20px;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-family: 'Racing Sans One', cursive;
+    color: var(--vermelho-mcqueen);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.footer-content p {
+    margin: 5px 0;
+    color: #ccc;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}
